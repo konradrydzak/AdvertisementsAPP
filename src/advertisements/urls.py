@@ -20,7 +20,9 @@ from .app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('category', views.category_list, name='categories list'),
-    path('offers', views.offer_list, name='offers list'),
-    path('offers/<int:id>', views.offer_by_id, name='offer by id'),
+    path('category', views.category_list, name='return all categories ordered by ordering field or POST a category'),
+    path('category/<int:id>', views.category_detail, name='manipulates a single category'),
+    path('offers', views.offer_list,
+         name='return all offers with columns ID, title, price and category ID - optionally accepts category ID as a query parameter (named category) or POST a category'),
+    path('offers/<int:id>', views.offer_detail, name='manipulates a single offer'),
 ]
