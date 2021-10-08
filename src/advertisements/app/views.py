@@ -29,7 +29,7 @@ class OfferList(generics.ListCreateAPIView):
     queryset = models.Offer.objects.all()
     serializer_class = serializers.OfferSerializer
 
-    def list(self, request, *args, **kwargs):
+    def list(self, request):
         category_query_param = request.query_params.get('category')
         if category_query_param:
             offers = models.Offer.objects.filter(category_id=category_query_param)
