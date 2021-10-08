@@ -15,7 +15,7 @@ Simulates a simple portal with advertisements.
 
 ## Skills used
 - created a functioning API with CRUD functionality in Django Rest Framework
-- learned new DRF utilities
+- learned and applied DRF utilities
 - implement option to docker compose PostgreSQL and Django app instances
 - provided end2end RestAPI endpoints tests in a Postman collection
 
