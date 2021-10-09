@@ -26,3 +26,14 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+
+  angular:
+    container_name: AdvertisementsAngular
+    image: angular
+    build: ./.angular/AdvertisementsAngular/
+    env_file: .env
+    ports:
+      - ${ANGULAR_EXTERNAL_PORT}:4200
+    depends_on:
+      - postgres
+      - django
