@@ -1,0 +1,80 @@
+/* Application-wide Styles */
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+  h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+  }
+  body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.15);
+  }
+  .styled-table thead tr {
+    background-color: #009398;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+  }
+  .styled-table tbody tr:hover {
+    border-bottom: thin solid #dddddd;
+    background-color: #777777;
+    color: #1b27da;
+  }
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.styled-table tbody tr:nth-of-type(even):hover {
+    background-color: #777777;
+    color: #1b27da;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009398;
+}
+
+.table-row {
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 5px 5px;
+}
+input { 
+    text-align: center; 
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
