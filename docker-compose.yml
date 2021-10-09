@@ -5,8 +5,6 @@ services:
     container_name: AdvertisementsDB
     image: postgres:14.0
     env_file: .env
-    ports:
-      - ${POSTGRES_EXTERNAL_PORT}:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -18,8 +16,8 @@ services:
 
   django:
     container_name: AdvertisementsAPP
-    image: django:1.10-python3
     build: .
+    image: django_rest_framework
     env_file: .env
     ports:
       - ${DJANGO_EXTERNAL_PORT}:8001
