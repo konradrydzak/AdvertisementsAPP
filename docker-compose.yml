@@ -5,6 +5,8 @@ services:
     container_name: AdvertisementsDB
     image: postgres:14.0
     env_file: .env
+    ports:
+      - ${POSTGRES_EXTERNAL_PORT}:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
