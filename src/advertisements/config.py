@@ -5,10 +5,10 @@ from pathlib import Path
 def config(filename='database.ini', section='postgresql'):
     """ Configure a database connection with parameters from database.ini file """
     parser = ConfigParser()
-    parser.read(Path("..", filename))
-    # If parser cannot find and read a file it has length of 1, in that case add a src/database.ini path to check
+    parser.read(filename)
+    # If parser cannot find and read a file it has length of 1, in that case add a ../database.ini path to check
     if len(parser) != 2:
-        parser.read(Path("src", filename))
+        parser.read(Path("..", filename))
 
     # Get section, default to postgresql
     db = {}
