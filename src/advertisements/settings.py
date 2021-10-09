@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w6riqitxzc(fu9_(alnhn9&*#hz!)k*$er%4d$59d&gwzrmn*(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['.localhost', '127.0.0.1', 'host.docker.internal', '[::1]']
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'advertisements.app',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'advertisements.urls'
 
