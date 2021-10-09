@@ -4,14 +4,19 @@ Project for recruitment and Django Rest Framework learning purposes.
 
 Simulates a simple portal with advertisements.
 
+You can preview the app at: http://srv08.mikr.us:40304 (with */admin*, */offers*, */category* endpoints) or
+at: http://srv08.mikr.us:40306 - to see my Single Page Application implementation
+
 ## Setup
 
 1. Fill in required details in *.env* and *database.ini* files (use *\<file>.example* for reference) - **recommended to
    use *DJANGO_EXTERNAL_PORT=8001* in *.env*** to avoid an additional step:
 
-> * Provided Angular website uses static *api_url*, so if you want to use custom *api_url* you need to manually change value of *this.http.get("http://host.docker.internal:8001/offers?format=json")* in *.angular/AdvertisementsAngular/dist/AdvertisementsAngular/main.\*.js* file
+> Provided Angular website uses static *api_url*, so if you want to use custom *api_url* you need to manually change value of *this.http.get("http://host.docker.internal:8001/offers?format=json")* in *.angular/AdvertisementsAngular/dist/AdvertisementsAngular/main.\*.js* file
 
 2. Docker compose (*docker-compose up -d*)
+
+> Aditionally if you want to create a superuser (to use Django admin site), you need to run *docker exec -it AdvertisementsAPP bash* and then enter two commands: *python manage.py migrate* and *python manage.py createsuperuser* with provided input for name, email and password accordingly
 
 ## Entity-Relationship Diagram
 
