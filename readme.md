@@ -9,14 +9,36 @@ at: http://srv08.mikr.us:40306 - to see my Single Page Application implementatio
 
 ## Setup
 
-1. Fill in required details in *.env* and *database.ini* files (use *\<file>.example* for reference) - **recommended to
-   use *DJANGO_EXTERNAL_PORT=8001* in *.env*** to avoid an additional step:
+1. Fill in required details in *database.ini* and *.env* files (in root of repo):
 
-> Provided Angular website uses static *api_url*, so if you want to use custom *api_url* you need to manually change value of *this.http.get("http://host.docker.internal:8001/offers?format=json")* in *.angular/AdvertisementsAngular/dist/AdvertisementsAngular/main.\*.js* file
+***database.ini***
+
+```
+[postgresql]
+engine=django.db.backends.postgresql_psycopg2
+name=advertisements
+user=postgres
+password=Password
+host=postgres
+port=5432
+```
+
+***.env***
+
+```
+POSTGRES_EXTERNAL_PORT=5433
+POSTGRES_PASSWORD=Password
+DJANGO_EXTERNAL_PORT=8001
+ANGULAR_EXTERNAL_PORT=4200
+```
+
+> > **Recommended to use *DJANGO_EXTERNAL_PORT=8001* in *.env*** to avoid an additional step:
+> >
+> > Provided Angular website uses static *api_url*, so if you want to use custom *api_url* you need to manually change value of *this.http.get("http://host.docker.internal:8001/offers?format=json")* in *.angular/AdvertisementsAngular/dist/AdvertisementsAngular/main.\*.js* file
 
 2. Docker compose (*docker-compose up -d*)
 
-> Aditionally if you want to create a superuser (to use Django admin site), you need to run *docker exec -it AdvertisementsAPP bash* and then enter two commands: *python manage.py migrate* and *python manage.py createsuperuser* with provided input for name, email and password accordingly
+> > Aditionally if you want to create a superuser (to use Django admin site), you need to run *docker exec -it AdvertisementsAPP bash* and then enter two commands: *python manage.py migrate* and *python manage.py createsuperuser* with provided input for name, email and password accordingly
 
 ## Entity-Relationship Diagram
 
