@@ -1,0 +1,20 @@
+<div style="text-align:center">
+  <h1>{{title}}</h1>
+  <p>Category ID:</p>
+  <input type="number" id="myInput" (keyup)="applyFilter()" placeholder="Search for category ID">
+</div>
+<br>
+<table border="1" class="styled-table">
+  <thead>
+    <tr>
+        <td class="table-row" style="width: 20px;">ID</td>
+        <td class="table-row">Title</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="details(item)" *ngFor="let item of data">
+      <td class="table-row">{{item.id}}</td>
+      <td style="padding: 5px 5px;" >{{item.title}}</td>
+    </tr>
+  </tbody>
+</table>
