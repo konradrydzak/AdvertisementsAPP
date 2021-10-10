@@ -4,7 +4,8 @@ Project for recruitment and Django Rest Framework learning purposes.
 
 Simulates a simple portal with advertisements.
 
-You can preview the app at: http://srv08.mikr.us:40304 (with */admin*, */offers*, */category* endpoints) or
+You can preview the app at: http://srv08.mikr.us:40304 (with *[/admin](http://srv08.mikr.us:40304/admin)*
+, *[/offers](http://srv08.mikr.us:40304/offers)*, *[/category](http://srv08.mikr.us:40304/category)* endpoints) or
 at: http://srv08.mikr.us:40306 - to see my Single Page Application implementation
 
 ## Setup
