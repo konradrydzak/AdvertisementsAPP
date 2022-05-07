@@ -28,6 +28,8 @@ port=5433
 
 ```
 POSTGRES_EXTERNAL_PORT=5433
+POSTGRES_DB=advertisements
+POSTGRES_USER=postgres
 POSTGRES_PASSWORD=Password
 DJANGO_EXTERNAL_PORT=8001
 ANGULAR_EXTERNAL_PORT=4200
@@ -37,9 +39,13 @@ ANGULAR_EXTERNAL_PORT=4200
 > >
 > > Provided Angular website uses static *api_url*, so if you want to use custom *api_url* you need to manually change value of *this.http.get("http://host.docker.internal:8001/offers?format=json")* in *.angular/AdvertisementsAngular/dist/AdvertisementsAngular/main.\*.js* file
 
-2. Docker compose (*docker-compose up -d*)
+2. Run command: `docker-compose up -d`
 
 > > Aditionally if you want to create a superuser (to use Django admin site), you need to run *docker exec -it AdvertisementsAPP bash* and then enter two commands: *python manage.py migrate* and *python manage.py createsuperuser* with provided input for name, email and password accordingly
+
+3. App should be running at: http://localhost:8001/ (with *[/admin](http://localhost:8001/admin)*
+, *[/offers](http://localhost:8001/offers)*, *[/category](http://localhost:8001/category)* endpoints) or
+at: http://localhost:4200 - to see my Single Page Application implementation
 
 ## Entity-Relationship Diagram
 
