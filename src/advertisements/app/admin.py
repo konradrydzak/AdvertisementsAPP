@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from . import models
+from advertisements.app import models
 
 admin.site.register((models.Category, models.Offer))

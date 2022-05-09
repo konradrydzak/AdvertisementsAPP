@@ -3,8 +3,8 @@ from rest_framework import mixins
 from rest_framework import status
 from rest_framework.response import Response
 
-from . import models
-from . import serializers
+from advertisements.app import models
+from advertisements.app import serializers
 
 
 class CategoryList(generics.ListCreateAPIView):
