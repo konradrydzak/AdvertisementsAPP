@@ -4,7 +4,6 @@ services:
   postgres:
     container_name: AdvertisementsDB
     image: postgres:14.0
-    env_file: .env
     ports:
       - ${POSTGRES_EXTERNAL_PORT}:5432
     environment:
@@ -20,7 +19,6 @@ services:
     container_name: AdvertisementsAPP
     build: .
     image: django_rest_framework
-    env_file: .env
     ports:
       - ${DJANGO_EXTERNAL_PORT}:8001
     depends_on:
@@ -29,9 +27,8 @@ services:
 
   angular:
     container_name: AdvertisementsAngular
-    image: angular
     build: ./.angular/AdvertisementsAngular/
-    env_file: .env
+    image: angular
     ports:
       - ${ANGULAR_EXTERNAL_PORT}:4200
     depends_on:

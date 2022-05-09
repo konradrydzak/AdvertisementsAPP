@@ -10,5 +10,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 EXPOSE 8001
-WORKDIR "src"
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8001", "--insecure"]
+CMD ["python", "src/manage.py", "runserver", "0.0.0.0:8001"]
