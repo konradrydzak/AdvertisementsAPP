@@ -10,29 +10,31 @@ at: http://srv08.mikr.us:40410 - to see my Single Page Application implementatio
 
 ## Setup
 
-1. Fill in required details in *database.ini* and *.env* files (in root of repo):
+1. Fill in required details in *.env* and *database.ini* files (in root of repo):
+
+***.env***
+
+```
+POSTGRES_DB=advertisements
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=Password
+POSTGRES_EXTERNAL_PORT=5433
+DJANGO_EXTERNAL_PORT=8001
+ANGULAR_EXTERNAL_PORT=4200
+
+```
 
 ***database.ini***
 
 ```
 [postgresql]
-engine=django.db.backends.postgresql_psycopg2
 name=advertisements
-user=postgres
-password=Password
 host=host.docker.internal
 port=5433
-```
+user=postgres
+password=Password
+engine=django.db.backends.postgresql_psycopg2
 
-***.env***
-
-```
-POSTGRES_EXTERNAL_PORT=5433
-POSTGRES_DB=advertisements
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=Password
-DJANGO_EXTERNAL_PORT=8001
-ANGULAR_EXTERNAL_PORT=4200
 ```
 
 > > **Recommended to use *DJANGO_EXTERNAL_PORT=8001* in *.env*** to avoid an additional step:
