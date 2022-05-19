@@ -28,11 +28,11 @@ ANGULAR_EXTERNAL_PORT=4200
 
 ```
 [postgresql]
-name=advertisements
 host=host.docker.internal
 port=5433
 user=postgres
 password=Password
+name=advertisements
 engine=django.db.backends.postgresql_psycopg2
 
 ```
