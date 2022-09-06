@@ -49,6 +49,16 @@ engine=django.db.backends.postgresql_psycopg2
 , *[/offers](http://localhost:8001/offers)*, *[/category](http://localhost:8001/category)* endpoints) or
 at: http://localhost:4200 - to see my Single Page Application implementation
 
+## Screenshots
+
+![Example_single_page_application.png](docs/Example_single_page_application.png "Example Single Page Application")
+
+![Example_offers_endpoint.png](docs/Example_offers_endpoint.png "Example offers endpoint")
+
+![Example_category_endpoint.png](docs/Example_category_endpoint.png "Example category enpoint")
+
+![Example_admin_endpoint.png](docs/Example_admin_endpoint.png "Example admin endpoint")
+
 ## Entity-Relationship Diagram
 
 ![AdvertisementsAPP-ERD.png](docs/AdvertisementsAPP-ERD.png "Simple ERD diagram for a advertisements portal")
