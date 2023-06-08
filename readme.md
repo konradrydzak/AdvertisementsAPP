@@ -4,9 +4,9 @@ Project for recruitment and Django Rest Framework learning purposes.
 
 Simulates a simple portal with advertisements.
 
-You can preview the app at: http://srv08.mikr.us:40409 (with *[/admin](http://srv08.mikr.us:40409/admin)*
-, *[/offers](http://srv08.mikr.us:40409/offers)*, *[/category](http://srv08.mikr.us:40409/category)* endpoints) or
-at: http://srv08.mikr.us:40410 - to see my Single Page Application implementation
+You can preview the app at: http://srv18.mikr.us:40096 (with *[/admin](http://srv18.mikr.us:40096/admin)*
+, *[/offers](http://srv18.mikr.us:40096/offers)*, *[/category](http://srv18.mikr.us:40096/category)* endpoints) or
+at: http://srv18.mikr.us:40097 - to see my Single Page Application implementation
 
 ## Setup
 
@@ -41,7 +41,7 @@ engine=django.db.backends.postgresql_psycopg2
 > >
 > > Provided Angular website uses static *api_url*, so if you want to use custom *api_url* you need to manually change value of *this.http.get("http://host.docker.internal:8001/offers?format=json")* in *.angular/AdvertisementsAngular/dist/AdvertisementsAngular/main.\*.js* file
 
-2. Run command: `docker-compose up -d`
+2. Run command: `docker compose up -d`
 
 > > Aditionally if you want to create a superuser (to use Django admin site), you need to run *docker exec -it AdvertisementsAPP bash* and then enter two commands: *python manage.py migrate* and *python manage.py createsuperuser* with provided input for name, email and password accordingly
 
